@@ -1,12 +1,20 @@
 WIN_COMBINATIONS = [
   [0,1,2], # Top row
+<<<<<<< HEAD
   [3,4,5], # Middle row
+=======
+  [3,4,5],  # Middle row
+>>>>>>> 0226c8b1528bb7b4404cb1a99a03057fc2f829b0
   [6,7,8], # Bottom row
   [0,3,6], # Left column
   [1,4,7], # Middle column
   [2,5,8], # Right column
   [0,4,8], # Diagonal Left to Right
+<<<<<<< HEAD
   [2,4,6]  # Diagonal Right to Left
+=======
+  [2,4,6] # Diagonal Right to Left
+>>>>>>> 0226c8b1528bb7b4404cb1a99a03057fc2f829b0
     ]
 
     def display_board (board = " ")
@@ -21,7 +29,11 @@ WIN_COMBINATIONS = [
       input_to_index = input.to_i - 1
     end
 
+<<<<<<< HEAD
     def move(board, index, current_player)
+=======
+    def move(board, index)
+>>>>>>> 0226c8b1528bb7b4404cb1a99a03057fc2f829b0
       board[index] = current_player
     end
 
@@ -38,10 +50,17 @@ WIN_COMBINATIONS = [
       input = gets.strip
       index = input_to_index(input)
       if valid_move?(board, index)
+<<<<<<< HEAD
           move(board, index, current_player(board))
           display_board(board)
       else
           turn(board)
+=======
+        move(board, index)
+        display_board(board)
+      else
+        turn(board)
+>>>>>>> 0226c8b1528bb7b4404cb1a99a03057fc2f829b0
       end
     end
 
@@ -103,6 +122,7 @@ def winner (board)
     nil
   end
 end
+<<<<<<< HEAD
 
 def play (board)
   turn = 0
@@ -117,3 +137,5 @@ def play (board)
       puts "Congratulations #{winner(board)}!"
     end #if end
 end #def end
+=======
+>>>>>>> 0226c8b1528bb7b4404cb1a99a03057fc2f829b0
